@@ -4,7 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ConnectingActivity$CallActivity">
+    tools:context=".activities.CallActivity">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="172dp"
+            android:layout_y="284dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/blur" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="358dp"
+            android:layout_height="496dp"
+            android:layout_x="46dp"
+            android:layout_y="86dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/blur" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="128dp"
+            android:layout_y="274dp"
+            app:srcCompat="@drawable/bglogin" />
+
+
+    </WebView>
+
     <ImageView
         android:id="@+id/endCall"
         android:layout_width="70dp"
@@ -37,15 +76,18 @@
         app:layout_constraintTop_toTopOf="@+id/endCall"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/btn_unmute_pressed" />
+
+
     <LinearLayout
         android:layout_width="197dp"
         android:layout_height="65dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/user_bg"
         android:orientation="horizontal"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -77,17 +119,47 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ritik Pal"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/city"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="GZB,India"
-                android:textColor="@color/black"
-                android:textSize="13dp" />
+                android:text="Ghaziabad, India"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
         </LinearLayout>
-
     </LinearLayout>
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="endCall,videoBtn,micBtn" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bglogin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingGroup"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading"></com.airbnb.lottie.LottieAnimationView>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

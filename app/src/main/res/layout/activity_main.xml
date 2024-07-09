@@ -30,7 +30,7 @@
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/loading_animation"></com.airbnb.lottie.LottieAnimationView>
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
+        android:id="@+id/profileImage"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:src="@drawable/demo_user"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/find"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"

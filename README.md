@@ -1,4 +1,5 @@
 ZenChat
+
 ZenChat is a real-time chat application for Android that allows users to sign in using their Google accounts and communicate with others through instant messaging. The app leverages Firebase for user authentication and real-time database management, ensuring a seamless and secure chat experience.
 
 Features
